@@ -5,38 +5,53 @@
 ## Структура проекта
 
 ```
-PR1/
-├── backend/                    # Серверная часть (Express.js)
-│   ├── app.js                  # Основной файл сервера с CRUD API
+├── backend/                          # Серверная часть (Express.js)
+│   ├── app.js                        # Основной файл сервера с CRUD API
 │   └── package.json
 │
-├── frontend/                   # Клиентская часть (React + SASS)
+├── frontend/                         # Клиентская часть (React + SASS)
+│   ├── public/
+│   │   ├── postman/                  # Скриншоты тестирования в Postman
+│   │   │   ├── get_all.png           # GET /api/products
+│   │   │   ├── get_by_id.png         # GET /api/products/:id
+│   │   │   ├── post_create.png       # POST /api/products
+│   │   │   ├── patch_update.png      # PATCH /api/products/:id
+│   │   │   ├── delete.png            # DELETE /api/products/:id
+│   │   │   ├── external_1.png        # Внешний API — запросы 1–5
+│   │   │   ├── external_2.png
+│   │   │   ├── external_3.png
+│   │   │   ├── external_4.png
+│   │   │   └── external_5.png
+│   │   └── index.html
 │   ├── src/
-│   │   ├── api/index.js        # Axios-клиент для запросов к API
+│   │   ├── api/
+│   │   │   └── index.js              # Axios-клиент для запросов к API
 │   │   ├── components/
-│   │   │   ├── ProductCard.jsx # Карточка товара
-│   │   │   ├── ProductList.jsx # Список карточек
-│   │   │   └── ProductModal.jsx# Модальное окно создания/редактирования
+│   │   │   ├── ProductCard.jsx       # Карточка товара
+│   │   │   ├── ProductList.jsx       # Список карточек
+│   │   │   └── ProductModal.jsx      # Модалка создания/редактирования
 │   │   ├── pages/
-│   │   │   ├── StorePage/      # Страница «Магазин» (SASS-стили)
-│   │   │   └── PostmanPage/    # Страница «Скриншоты Postman»
-│   │   ├── App.js              # Роутинг и навигация
-│   │   └── App.css             # Глобальные стили
-│   ├── public/postman/         # Скриншоты тестирования в Postman
+│   │   │   ├── StorePage/
+│   │   │   │   ├── StorePage.jsx     # Страница «Магазин»
+│   │   │   │   └── StorePage.scss    # SASS-стили (переменные, миксины, вложенность)
+│   │   │   └── PostmanPage/
+│   │   │       ├── PostmanPage.jsx   # Страница «Скриншоты Postman»
+│   │   │       └── PostmanPage.scss
+│   │   ├── App.js                    # Роутинг и навигация
+│   │   ├── App.css                   # Глобальные стили
+│   │   └── index.js                  # Точка входа React
 │   └── package.json
 │
-└── postman/                    # Исходные скриншоты Postman
-    ├── my/                     # Тестирование собственного API
-    └── not-my/                 # Тестирование внешнего API
+└── README.md
 ```
 
 ## Какие практики покрывает проект
 
 | Практика | Тема | Что реализовано |
 |----------|------|-----------------|
-| ПР1 | CSS-препроцессоры (SASS) | Переменные, миксины, вложенность в `StorePage.scss` |
+| ПР1 | CSS-препроцессоры (SASS) | Переменные, миксины, вложенность в `frontend/src/pages/StorePage/StorePage.scss` |
 | ПР2 | Express.js API | CRUD для товаров в `backend/app.js` |
-| ПР3 | JSON + Postman | Скриншоты на странице «Скриншоты Postman» |
+| ПР3 | JSON + Postman | Скриншоты в `frontend/public/postman/`, отображаются на странице «Скриншоты Postman» |
 | ПР4 | React + API | Связка фронтенда и бэкенда, интернет-магазин |
 
 ## Как запустить
@@ -79,7 +94,7 @@ bun start
 ## Страницы приложения
 
 - **Магазин** (`/`) — каталог товаров с возможностью добавления, редактирования и удаления
-- **Скриншоты Postman** (`/postman`) — результаты тестирования API в Postman
+- **Скриншоты Postman** (`/postman`) — результаты тестирования API в Postman (собственный + внешний API)
 
 ## Скриншоты тестирования Postman
 
