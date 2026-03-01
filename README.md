@@ -1,6 +1,6 @@
 # TechStore — Интернет-магазин электроники
 
-Проект выполнен в рамках практических занятий 1–4 по дисциплине «Фронтенд и бэкенд разработка».
+Проект выполнен в рамках практических занятий 1–5 по дисциплине «Фронтенд и бэкенд разработка».
 
 ## Структура проекта
 
@@ -53,6 +53,7 @@
 | ПР2 | Express.js API | CRUD для товаров в `backend/app.js` |
 | ПР3 | JSON + Postman | Скриншоты в `frontend/public/postman/`, отображаются на странице «Скриншоты Postman» |
 | ПР4 | React + API | Связка фронтенда и бэкенда, интернет-магазин |
+| ПР5 | Swagger / OpenAPI | JSDoc-аннотации для схемы `Product` и всех CRUD-маршрутов, UI доступен на `/api-docs` |
 
 ## Как запустить
 
@@ -91,6 +92,8 @@ bun start
 
 После запуска открыть в браузере: [http://localhost:3001](http://localhost:3001)
 
+Swagger UI доступен по адресу: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+
 ## Страницы приложения
 
 - **Магазин** (`/`) — каталог товаров с возможностью добавления, редактирования и удаления
@@ -113,4 +116,4 @@ bun start
 ## Технологии
 
 - **Frontend:** React, SASS, Axios, React Router
-- **Backend:** Node.js, Express.js, CORS, nanoid
+- **Backend:** Node.js, Express.js, CORS, nanoid, swagger-jsdoc, swagger-ui-express
